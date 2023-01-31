@@ -3,7 +3,6 @@ package ru.netology.web.page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import ru.netology.web.TransferPage;
 import ru.netology.web.data.DataHelper;
 
 import static com.codeborne.selenide.Condition.*;
@@ -31,7 +30,7 @@ public class DashBoardPage {
     private int extractBalance(String text) {
         var start = text.indexOf(balanceStart);
         var finish = text.indexOf(balanceFinish);
-        var value = text.substring(start + balanceStart.length().finish);
+        var value = text.substring(start + balanceStart.length(), finish);
         return Integer.parseInt(value);
     }
 
