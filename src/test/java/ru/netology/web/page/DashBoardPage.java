@@ -19,7 +19,7 @@ public class DashBoardPage {
     public DashBoardPage() { heading.shouldBe(visible); }
 
     public int getCardBalance(DataHelper.CardInfo cardInfo) {
-        var text = cards.findBy(text(cardInfo.getCardNumber().substring(12, 16))).getText();
+        var text = cards.findBy(text(cardInfo.getCardNumber().substring(16, 19))).getText();
         return extractBalance(text);
     }
     public TransferPage selectCardToTransfer(DataHelper.CardInfo cardinfo) {
